@@ -147,6 +147,8 @@ GameObject:
   - component: {fileID: 636591352}
   - component: {fileID: 636591351}
   - component: {fileID: 636591350}
+  - component: {fileID: 636591355}
+  - component: {fileID: 636591356}
   m_Layer: 0
   m_Name: LeftHandContainer
   m_TagString: Untagged
@@ -199,8 +201,8 @@ MonoBehaviour:
   throwMultiplier: 1
   createRigidBodyWhenNotTouching: 0
   controllerAttachPoint: {fileID: 1771149660}
-  controllerEvents: {fileID: 0}
-  interactTouch: {fileID: 0}
+  controllerEvents: {fileID: 636591352}
+  interactTouch: {fileID: 636591350}
 --- !u!114 &636591352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -313,6 +315,37 @@ MonoBehaviour:
   interactUse: {fileID: 0}
   customOrigin: {fileID: 0}
   controller: {fileID: 0}
+--- !u!114 &636591355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636591348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65eb64f0f2fd6d64faddbcf5d7d3bdbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useButton: 3
+  controllerEvents: {fileID: 636591352}
+  interactTouch: {fileID: 0}
+  interactGrab: {fileID: 0}
+--- !u!114 &636591356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636591348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eda201177cd508f49849386d157bdd39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colliderRadius: 0.2
+  customColliderContainer: {fileID: 0}
+  interactTouch: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,7 +479,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4693252548441896, guid: eb6748575a8fce346b19dff6cb1471ec, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4693252548441896, guid: eb6748575a8fce346b19dff6cb1471ec, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -893,7 +926,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 1, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1367860358
 GameObject:
@@ -905,7 +938,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1367860359}
   m_Layer: 0
-  m_Name: Hands
+  m_Name: VRTK_Scripts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1022,11 +1055,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 3.8230002
       objectReference: {fileID: 0}
-    - target: {fileID: 114963189862696322, guid: afec65f27dcd2c74cba31fc61eea61e6,
-        type: 3}
-      propertyPath: mirrorModel
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afec65f27dcd2c74cba31fc61eea61e6, type: 3}
 --- !u!4 &1524550774 stripped
@@ -1055,6 +1083,8 @@ GameObject:
   - component: {fileID: 1863109118}
   - component: {fileID: 1863109117}
   - component: {fileID: 1863109116}
+  - component: {fileID: 1863109121}
+  - component: {fileID: 1863109122}
   m_Layer: 0
   m_Name: RightHandContainer
   m_TagString: Untagged
@@ -1107,8 +1137,8 @@ MonoBehaviour:
   throwMultiplier: 1
   createRigidBodyWhenNotTouching: 0
   controllerAttachPoint: {fileID: 601504607}
-  controllerEvents: {fileID: 0}
-  interactTouch: {fileID: 0}
+  controllerEvents: {fileID: 1863109118}
+  interactTouch: {fileID: 1863109116}
 --- !u!114 &1863109118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1221,6 +1251,37 @@ MonoBehaviour:
   interactUse: {fileID: 0}
   customOrigin: {fileID: 0}
   controller: {fileID: 0}
+--- !u!114 &1863109121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863109114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65eb64f0f2fd6d64faddbcf5d7d3bdbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useButton: 3
+  controllerEvents: {fileID: 1863109118}
+  interactTouch: {fileID: 0}
+  interactGrab: {fileID: 0}
+--- !u!114 &1863109122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863109114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eda201177cd508f49849386d157bdd39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colliderRadius: 0.2
+  customColliderContainer: {fileID: 0}
+  interactTouch: {fileID: 0}
 --- !u!1001 &1919578631
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1317,11 +1378,6 @@ PrefabInstance:
       propertyPath: mirrorModel
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114963189862696322, guid: afec65f27dcd2c74cba31fc61eea61e6,
-        type: 3}
-      propertyPath: controllerEvents
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afec65f27dcd2c74cba31fc61eea61e6, type: 3}
 --- !u!1 &2081889126
@@ -1415,7 +1471,7 @@ Transform:
   m_LocalScale: {x: 5000, y: 1, z: 5000}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1604274884293777375
 PrefabInstance:
@@ -1467,7 +1523,7 @@ PrefabInstance:
     - target: {fileID: 6630112281996559224, guid: 1cb8aabb9fc529e46af5b8ad40ac22f2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6630112281996559224, guid: 1cb8aabb9fc529e46af5b8ad40ac22f2,
         type: 3}
